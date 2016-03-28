@@ -142,6 +142,7 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <EmbeddedResource Include="Views\Shared\Components\_HelloWorld.cshtml" />
+    <Content Include="Views\Shared\Components\_PartialHelloWorld.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -162,6 +163,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="HelloWorld.cs" />
+    <Compile Include="PartialHelloWorld.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -16,6 +16,7 @@ namespace Chloe.Web
 			Container = new UnityContainer();
 
             Container.RegisterType<IHelloWorld, HelloWorld>();
+            Container.RegisterType<IPartialHelloWorld, PartialHelloWorld>();
             DependencyResolver.SetResolver(new UnityDependencyResolver(Container));
         }
     }

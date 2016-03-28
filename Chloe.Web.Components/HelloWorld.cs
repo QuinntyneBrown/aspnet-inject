@@ -8,14 +8,15 @@ namespace Chloe.Web.Components
     {
         public HelloWorld()
         {
-            this.Message = "Hello from Web Project";
         }
 
         public string Message { get; set; }
 
         public IHelloWorld Invoke()
         {
-            return new HelloWorld() { Message = "Hello from Web Project" };
+            return new HelloWorld() { Message = "Hello from Web Project", PartialViewLocation = Chloe.Core.Components.Constants.PartialHelloWorldViewLocation };
         }
+
+        public string PartialViewLocation { get; set; }
     }
 }

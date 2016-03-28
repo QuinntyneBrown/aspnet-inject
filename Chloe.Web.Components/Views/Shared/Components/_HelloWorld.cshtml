@@ -2,5 +2,9 @@
     var HelloWorldComponent = DependencyResolver.Current.GetService<Chloe.Components.Contracts.IHelloWorld>().Invoke();
 }
 
+<div>
+    <h1>@HelloWorldComponent.Message ??</h1>
+</div>
 
-<h1>@HelloWorldComponent.Message ??</h1>
+
+@Html.Partial(HelloWorldComponent.PartialViewLocation)
