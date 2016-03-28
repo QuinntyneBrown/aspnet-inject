@@ -1,0 +1,6 @@
+﻿@{
+    var HelloWorldComponent = DependencyResolver.Current.GetService<Chloe.Components.Contracts.IHelloWorld>().Invoke();
+}
+
+
+<h1>@HelloWorldComponent.Message ??</h1>
