@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using Chloe.Http.Contracts;
+using Chloe.Web.Components;
 
 namespace Chloe.Web
 {
-    public class AngularYouTubeVideos: IAngularYouTubeVideos
+    public class AngularYouTubeVideos: BaseComponent<IAngularYouTubeVideos>, IAngularYouTubeVideos
     {
         public AngularYouTubeVideos(IChloeHttpClient client)
         {
@@ -14,7 +15,7 @@ namespace Chloe.Web
             this.client = client;
         }
 
-        public IAngularYouTubeVideos Invoke()
+        public override IAngularYouTubeVideos Invoke()
         {
             var entity = new AngularYouTubeVideos(this.client);
             ICollection<YouTubeVideo> result = this.client.Get<ICollection<YouTubeVideo>>("http://www.angular.video/api/youTubeVideo/get");

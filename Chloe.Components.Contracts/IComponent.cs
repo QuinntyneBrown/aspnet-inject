@@ -3,5 +3,7 @@
     public interface IComponent<T>
     {
         T Invoke();
+
+        T Invoke(dynamic options);
     }
 }

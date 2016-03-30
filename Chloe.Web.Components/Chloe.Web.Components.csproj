@@ -142,6 +142,7 @@
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Components\_AngularYouTubeVideos.cshtml" />
+    <Content Include="Views\Shared\Components\_Header.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -153,6 +154,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseComponent.cs" />
     <Compile Include="YouTubeVideo.cs" />
     <Content Include="App_Code\RegisterVirtualPathProvider.cs" />
     <Compile Include="AngularYouTubeVideos.cs" />

@@ -4,7 +4,7 @@ using Chloe.Components.Contracts;
 
 namespace Chloe.Web.Components
 {
-    public class HelloWorld: IHelloWorld
+    public class HelloWorld: BaseComponent<IHelloWorld>, IHelloWorld
     {
         public HelloWorld()
         {
@@ -12,7 +12,7 @@ namespace Chloe.Web.Components
 
         public string Message { get; set; }
 
-        public IHelloWorld Invoke()
+        public override IHelloWorld Invoke()
         {
             return new HelloWorld() {
                 Message = "Hello from Web Project",
