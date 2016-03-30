@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web.Routing;
 using System.Web.Optimization;
+using System.Web.Mvc;
 
 namespace Chloe.Web
 {
@@ -9,6 +10,8 @@ namespace Chloe.Web
 
         protected void Application_Start(object sender, EventArgs e)
         {
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new RazorViewEngine());
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             UnityConfig.RegisterComponents();
             RouteConfig.RegisterRoutes(RouteTable.Routes);

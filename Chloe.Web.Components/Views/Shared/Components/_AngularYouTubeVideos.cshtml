@@ -1,0 +1,13 @@
+﻿@{
+    Chloe.Components.Contracts.IAngularYouTubeVideos AngularYouTubeVideos
+        = DependencyResolver.Current.GetService<Chloe.Components.Contracts.IAngularYouTubeVideos>().Invoke();
+
+}
+
+
+<h1>Angular You Tube Videos</h1>
+
+
+@foreach(var video in AngularYouTubeVideos.Videos){
+        <div>@video.Name</div>
+}

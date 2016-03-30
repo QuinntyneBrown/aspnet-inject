@@ -12,8 +12,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Chloe.Web</RootNamespace>
-    <AssemblyName>Chloe.Web</AssemblyName>
+    <RootNamespace>Chloe.Web.Components</RootNamespace>
+    <AssemblyName>Chloe.Web.Components</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -141,8 +141,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
-    <EmbeddedResource Include="Views\Shared\Components\_HelloWorld.cshtml" />
-    <Content Include="Views\Shared\Components\_PartialHelloWorld.cshtml" />
+    <Content Include="Views\Shared\Components\_AngularYouTubeVideos.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -154,7 +153,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="YouTubeVideo.cs" />
     <Content Include="App_Code\RegisterVirtualPathProvider.cs" />
+    <Compile Include="AngularYouTubeVideos.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
@@ -178,6 +179,10 @@
       <Project>{c1579e9f-f866-46c1-b812-191538cb3ed4}</Project>
       <Name>Chloe.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Chloe.Http\Chloe.Http.csproj">
+      <Project>{859d76c0-2eae-4fd7-86da-8cd9e5b544cc}</Project>
+      <Name>Chloe.Http</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
@@ -196,7 +201,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>51539</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:51539/</IISUrl>
+          <IISUrl>http://localhost:51538/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

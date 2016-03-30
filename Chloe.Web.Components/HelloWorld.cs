@@ -14,7 +14,10 @@ namespace Chloe.Web.Components
 
         public IHelloWorld Invoke()
         {
-            return new HelloWorld() { Message = "Hello from Web Project", PartialViewLocation = Chloe.Core.Components.Constants.PartialHelloWorldViewLocation };
+            return new HelloWorld() {
+                Message = "Hello from Web Project",
+                PartialViewLocation = Chloe.Core.Components.Constants.PartialHelloWorldViewLocation
+            };
         }
 
         public string PartialViewLocation { get; set; }
